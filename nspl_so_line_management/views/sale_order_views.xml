@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Inherit Sale Order Form View to add plus button -->
+        <record id="view_order_form_inherit_add_line_button" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit.add.line.button</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='order_line']//list//field[@name='product_template_id']" position="before">
+                    <button name="add_line_after"
+                            type="object"
+                            string="+"
+                            class="btn btn-sm btn-outline-success oe_add_line_button_alt"
+                            title="Add new line after this one"
+                            help="Click to add a new line after this product"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

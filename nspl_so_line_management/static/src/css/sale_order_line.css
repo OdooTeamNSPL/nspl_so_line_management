@@ -1,0 +1,82 @@
+/* Sale Order Line Management Styles */
+
+.o_list_view .oe_add_line_button,
+.o_list_view .oe_add_line_button_alt {
+    opacity: 1;
+    transition: all 0.2s ease;
+    padding: 4px 8px;
+    margin: 2px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    min-width: 30px;
+    cursor: pointer;
+}
+
+.o_list_view .oe_add_line_button:hover {
+    background-color: #007bff !important;
+    color: white !important;
+    border-color: #007bff !important;
+    transform: scale(1.05);
+}
+
+.o_list_view .oe_add_line_button_alt:hover {
+    background-color: #28a745 !important;
+    color: white !important;
+    border-color: #28a745 !important;
+    transform: scale(1.05);
+}
+
+.o_list_view .oe_add_line_button:focus,
+.o_list_view .oe_add_line_button_alt:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,123,255,.25);
+}
+
+/* Button column width */
+.o_list_view td:has(.oe_add_line_button),
+.o_list_view td:has(.oe_add_line_button_alt) {
+    width: 50px;
+    text-align: center;
+    padding: 6px 4px;
+    vertical-align: middle;
+}
+
+/* Make buttons always visible and attractive */
+.o_list_view .oe_add_line_button,
+.o_list_view .oe_add_line_button_alt {
+    display: inline-block;
+    opacity: 0.8;
+}
+
+.o_list_view tr:hover .oe_add_line_button,
+.o_list_view tr:hover .oe_add_line_button_alt {
+    opacity: 1;
+}
+
+/* Ensure buttons work in edit mode */
+.o_form_editable .oe_add_line_button,
+.o_form_editable .oe_add_line_button_alt {
+    opacity: 1;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .oe_add_line_button,
+    .oe_add_line_button_alt {
+        padding: 6px 10px;
+        font-size: 16px;
+    }
+}
+
+/* Alternative rounded style */
+.o_list_view .oe_add_line_button.rounded,
+.o_list_view .oe_add_line_button_alt.rounded {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}

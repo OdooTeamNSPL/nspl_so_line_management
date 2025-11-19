@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Sale Order Line Management',
-    'version': '18.0.1.0.0',
+    'version': '19.0.1',
     'category': 'Sales',
     'summary': 'Add plus (+) button to easily insert new lines in Sale Orders and Quotations',
     'description': """

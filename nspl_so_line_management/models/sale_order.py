@@ -21,7 +21,7 @@ class SaleOrderLine(models.Model):
             default_uom = self.env['uom.uom'].search([('category_id.name', '=', 'Unit')], limit=1)
 
         vals = self.env['sale.order.line'].default_get([
-            'name', 'product_uom', 'product_uom_qty', 'price_unit'
+            'name', 'product_uom_id', 'product_uom_qty', 'price_unit'
         ])
 
         vals.update({
@@ -38,7 +38,7 @@ class SaleOrderLine(models.Model):
         })
 
         if default_uom:
-            vals['product_uom'] = default_uom.id
+            vals['product_uom_id'] = default_uom.id
 
         self.env['sale.order.line'].create(vals)
 
